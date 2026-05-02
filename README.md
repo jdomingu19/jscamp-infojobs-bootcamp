@@ -1,4 +1,4 @@
-# JSCamp Infojobs Bootcamp
+# JSCamp InfoJobs Bootcamp
 
 ![Static Badge](https://img.shields.io/badge/typescript-5+-1C2024?style=for-the-badge&logo=typescript&logoColor=white&labelColor=101010)
 ![Static Badge](https://img.shields.io/badge/javascript-ES6+-1C2024?style=for-the-badge&logo=javascript&logoColor=white&labelColor=101010)
