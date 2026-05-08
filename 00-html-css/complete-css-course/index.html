@@ -1,0 +1,486 @@
+<!-- JSCamp InfoJobs Bootcamp @jdomingu19 -->
+<!-- Full-Stack Web Bootcamp @midudev -->
+<!-- Module 2: HTML & CSS: Complete CSS Course -->
+<!doctype html>
+<html>
+  <head>
+    <!-- Define the character encoding for the document -->
+    <meta charset="utf-8" />
+
+    <!-- Ensure proper rendering and touch zooming on mobile devices -->
+    <meta name="viewport" content="width=device-width" />
+
+    <!-- Set the page title and provide a description for SEO -->
+    <title>@jdomingu19's Portfolio</title>
+    <meta
+      name="description"
+      content="@jdomingu19's Portfolio, Full Stack Developer specializing in TypeScript, Node.js,
+      and React Native for iOS, Android, & Web Applications."
+    />
+
+    <!-- Open Graph metadata for social media previews -->
+    <meta
+      property="og:title"
+      content="Portfolio of an exemplary Software Engineer"
+    />
+    <meta
+      property="og:description"
+      content="Software Engineering | iOS, Android, & Web Applications | TypeScript, React Native & Expo Developer | Building Software With '\u{2665}' (♥)"
+    />
+    <meta property="og:image" content="./images/me.png" />
+    <meta property="og:image-alt" content="A picture of Jesús Domínguez" />
+
+    <!-- Define alternate language version and canonical URL for SEO -->
+    <link rel="alternate" href="https://jdomingu19.dev/en" hreflang="en-GB" />
+    <link rel="canonical" href="https://jdomingu19.dev/" />
+
+    <!-- Control search engine behavior and set theme color for browsers -->
+    <meta name="robots" content="index, follow" />
+    <meta name="theme-color" content="#101010" />
+
+    <!-- Define favicon for the page -->
+    <link rel="icon" type="image/jpg" href="./images/me.png" />
+
+    <!-- ? -->
+    <style>
+      /* ? */
+      /* selector {
+        property: value; <- declaration
+      } */
+
+      /* ? */
+      h1 {
+        /* color: brown; */
+
+        /* color: #0099ff; */
+        /* color: #09f; <- same as #0099ff */
+
+        /* color: transparent; */
+        /* color: #RRGGBBAA; <-RGBA hex notation */
+        /* color: #00000055; <- transparent hex color */
+        /* color: #0099ffff; <- hex color with full opacity */
+        /* color: #0099ff00; <- hex color with full transparency */
+
+        /* color: rgba(0, 0, 0, 0.333); <- legacy */
+        /* color: hsla(0, 0%, 0%, 0.5); */
+        /* color: rgb(0 0 0 / 50%); */
+        /* color: oklch(0% 0 0 / 0.5); */
+
+        color: #0099ffff;
+        border-width: 3px;
+        border-style: solid;
+        border-color: currentColor; /* <- #0099ffff */
+        font-family: monospace;
+      }
+
+      /* ? */
+      body {
+        background: #f0f0f0;
+        font-family:
+          system-ui,
+          -apple-system,
+          BlinkMacSystemFont,
+          "Segoe UI",
+          Roboto,
+          Oxygen,
+          Ubuntu,
+          Cantarell,
+          "Open Sans",
+          "Helvetica Neue",
+          sans-serif;
+      }
+
+      /* ? */
+      /* a {
+        color: brown;
+      } */
+
+      /* ? */
+      .link {
+        color: brown;
+      }
+
+      /* ? */
+      .link:hover {
+        color: darkslategrey;
+        /* border: 5px solid darkslategrey; */
+        outline: 5px solid darkslategrey;
+      }
+
+      /* ? */
+      .link:active {
+        outline: 5px solid gray;
+      }
+
+      /* ? */
+      .link:focus {
+        border: 1px solid brown;
+      }
+
+      /* ? */
+      #openModal {
+        background: brown;
+        color: #fff;
+        border: 0;
+      }
+
+      /* ? */
+      .description {
+        border: 1px solid brown;
+        /* Border applied to the <p> element */
+        /* Inner <strong> child does not inherit the border */
+      }
+
+      /* ? */
+      .description strong {
+        border: inherit;
+        /* Border applied to the <p> element */
+        /* Inner <strong> child does inherit the border */
+
+        font-size: initial;
+        /* Reset font size to the browser's default value */
+        /* Ensures the <strong> element does not inherit or override custom font sizing */
+      }
+
+      /* ? */
+      /* li {
+        color: brown;
+      } */
+
+      /* ? */
+      li:first-child {
+        color: brown;
+      }
+
+      /* ? */
+      li:last-child {
+        color: darkslategray;
+      }
+
+      /* ? */
+      /* article {
+        font-size: 24px;
+      } */
+
+      /* ? */
+      /* article > p {
+        color: #09f;
+      } */
+    </style>
+  </head>
+  <body>
+    <!-- The header introduces the portfolio and provides navigation -->
+    <header>
+      <h1>@jdomingu19's Portfolio 👨‍💻</h1>
+
+      <!-- Embedded YouTube video for multimedia presentation -->
+      <iframe
+        style="width: 100%; aspect-ratio: 16/9"
+        src="https://www.youtube.com/embed/IUndJ7F0Lus?si=5yN1TumJySFt4VtY"
+        title="YouTube video player"
+        frameborder="0"
+        allow="
+          accelerometer;
+          autoplay;
+          clipboard-write;
+          encrypted-media;
+          gyroscope;
+          picture-in-picture;
+          web-share;
+        "
+        referrerpolicy="strict-origin-when-cross-origin"
+        allowfullscreen
+      ></iframe>
+
+      <!-- Navigation menu with internal and external links -->
+      <nav>
+        <a class="link" href="#experience">Experience</a>
+        <a class="link" href="#projects">Projects</a>
+        <a
+          class="link"
+          href="https://linktr.ee/jdomingu19"
+          target="_blank"
+          rel="noreferrer"
+          >Social Media</a
+        >
+      </nav>
+    </header>
+
+    <!-- Modal dialog element providing native popup functionality -->
+    <dialog id="myModal">
+      <h1>Did you know that you can open a model like this?</h1>
+      <p>And it's totally native!</p>
+      <button id="closeModal">Close modal</button>
+    </dialog>
+
+    <!-- Button that triggers the modal window -->
+    <button id="openModal">See more information</button>
+
+    <!-- JavaScript to handle modal open and close actions -->
+    <script>
+      window.openModal.addEventListener("click", () => {
+        window.myModal.showModal();
+      });
+
+      window.closeModal.addEventListener("click", () => {
+        window.myModal.close();
+      });
+    </script>
+
+    <!-- Example of embedding a video element with playback controls -->
+    <!-- <video
+      src="https://some-awesome/video.mp4"
+      controls
+      muted
+      autoplay
+      loop
+    ></video> -->
+
+    <!-- Example of embedding an audio element with playback controls -->
+    <!-- <audio
+      src="https://some-awesome/audio.mp3"
+      controls
+    ></audio> -->
+
+    <!-- Main content area of the portfolio -->
+    <main>
+      <!-- Short introduction highlighting professional role -->
+      <p class="description">
+        <strong>Full Stack Developer</strong> specializing in TypeScript,
+        Node.js, and React Native for iOS, Android, & Web Applications.
+      </p>
+
+      <!-- Experience section listing past roles -->
+      <h2 id="experience">Experience</h2>
+
+      <ul>
+        <li class="list-item">Some company - 2028</li>
+        <li class="list-item">Some company - 2027</li>
+        <li class="list-item">Some company - 2026</li>
+      </ul>
+
+      <!-- Downloadable profile image with descriptive alt text -->
+      <a download href="./images/me.png">
+        <img
+          src="./images/me.png"
+          alt="A picture of Jesús Domínguez with his arms crossed, wearing a gray t-shirt, and a blue men's towel on his right arm"
+          title="A picture of Jesús Domínguez"
+          width="200"
+          height="200"
+          id="photo-image"
+        />
+      </a>
+
+      <!-- This is a HTML comment -->
+
+      <!-- Projects section showcasing completed work -->
+      <h2 id="projects">Completed Projects</h2>
+
+      <!-- Aside element highlighting favorite technologies -->
+      <aside>
+        <header>
+          <h3>My Favorite <span>Technologies</span></h3>
+        </header>
+        <!-- Ordered list with custom attributes (reversed, start, value) -->
+        <ol type="1" reversed start="5">
+          <li>TypeScript</li>
+          <li>Node.js</li>
+          <li value="7">React Native</li>
+          <li>Expo</li>
+        </ol>
+      </aside>
+
+      <!-- <div role="button">Click here</div> -->
+
+      <!-- Example of a semantic button replacing a div with role="button" -->
+      <button>Click here</button>
+
+      <!-- Section showcasing completed projects -->
+      <section>
+        <!-- Article presenting a corporate website project -->
+        <article>
+          <header>
+            <h4>Corporate Website</h4>
+            <!-- Project screenshot with lazy loading and aspect ratio styling -->
+            <img
+              src="./images/tesla-example.png"
+              alt="Screenshot of the official Tesla website"
+              loading="lazy"
+              style="width: 100%; aspect-ratio: 48/19"
+            />
+          </header>
+          <p>
+            Development of a corporate website with a friendly interface,
+            intuitive and modern.
+          </p>
+          <!-- Footer listing technologies used in the project -->
+          <footer>
+            <small>Technologies used: HTML, CSS, JavaScript</small>
+          </footer>
+        </article>
+
+        <!-- Article presenting an e-commerce web application project -->
+        <article>
+          <header>
+            <h4>E-commerce Web Application</h4>
+          </header>
+          <p>Creating an e-commerce platform for a store local</p>
+          <footer>
+            <small>Technologies used: React, Node.js, MongoDB</small>
+          </footer>
+        </article>
+
+        <!-- Article presenting a fitness tracking mobile app project -->
+        <article>
+          <header>
+            <h4>Fitness Tracking Mobile App</h4>
+          </header>
+          <p>
+            Development of a mobile application to track physical activities and
+            eating habits
+          </p>
+          <footer>
+            <small>Technologies used: React Native, Expo, Supabase</small>
+          </footer>
+        </article>
+      </section>
+
+      <!-- Section containing frequently asked questions -->
+      <section>
+        <h2>Frequently Asked Questions</h2>
+
+        <!-- Details element with summary and answer about academic background -->
+        <details open>
+          <summary>What studies do you have?</summary>
+          <p>
+            I studied a Master's Degree in Software Engineering at the
+            Polytechnic University of Catalonia (UPC).
+          </p>
+        </details>
+
+        <!-- Details element with summary and answer about hobbies -->
+        <details>
+          <summary>What are your hobbies?</summary>
+          <p>
+            I am passionate about photography, reading books, and playing
+            sports.
+          </p>
+        </details>
+
+        <!-- Details element with summary and answer about favorite programming language -->
+        <details>
+          <summary>What is your favorite language?</summary>
+          <p>
+            TypeScript, a strongly typed programming language with which I can
+            do large-scale software projects.
+          </p>
+        </details>
+      </section>
+
+      <!-- Section containing a contact form -->
+      <section>
+        <h2>Contact Form</h2>
+
+        <!-- Form element with POST method and action pointing to current directory -->
+        <form method="post" action="./">
+          <!-- Fieldset grouping personal information inputs -->
+          <fieldset>
+            <legend>Personal information</legend>
+            <!-- Text input for user's name -->
+            <label style="display: block">
+              Name:
+              <input
+                type="text"
+                name="name"
+                placeholder="Jesús Domínguez"
+                required
+              />
+            </label>
+            <!-- Email input with validation -->
+            <label style="display: block">
+              Email:
+              <input
+                type="email"
+                name="email"
+                placeholder="some@email.com"
+                required
+              />
+            </label>
+          </fieldset>
+
+          <!-- Fieldset grouping additional information inputs -->
+          <fieldset>
+            <legend>Additional information</legend>
+            <!-- Telephone input with pattern validation -->
+            <label style="display: block">
+              Telephone:
+              <input
+                type="tel"
+                name="telephone"
+                placeholder="+34 688 888 899"
+                required
+                pattern="[0-9]{9}"
+              />
+            </label>
+          </fieldset>
+
+          <!-- Fieldset grouping other options -->
+          <fieldset>
+            <legend>Others</legend>
+
+            <!-- Dropdown select for contact reason -->
+            <div>
+              <label for="why">Why do you want to contact me?</label>
+              <select name="why" id="why">
+                <option value="1">Job</option>
+                <option value="2">FAQ</option>
+                <option value="3">More Information</option>
+              </select>
+            </div>
+
+            <!-- Checkbox for terms and conditions -->
+            <div>
+              <label for="terms">Do you accept the terms and conditions?</label>
+              <input type="checkbox" id="terms" name="terms" required />
+            </div>
+
+            <!-- Input with datalist for programming language selection -->
+            <div>
+              <datalist id="languages">
+                <option value="TypeScript"></option>
+                <option value="JavaScript"></option>
+                <option value="Python"></option>
+                <option value="Java"></option>
+                <option value="Kotlin"></option>
+                <option value="Swift"></option>
+              </datalist>
+              <label>
+                What language do you want me to help you with?
+                <input list="languages" name="languages" />
+              </label>
+            </div>
+          </fieldset>
+
+          <!-- Submit button for sending the form -->
+          <!-- <input type="submit" value="Send Contact" /> -->
+          <!-- <button type="submit">Send Contact</button> -->
+          <button>Send Contact</button>
+        </form>
+      </section>
+    </main>
+
+    <!-- Footer providing closing information and contact links -->
+    <footer>
+      Copyright ® 2026 - The most beautiful portfolio in the world
+
+      <!-- Email link using mailto protocol -->
+      <a href="mailto:some@email.com">Send me an email</a>
+
+      <!-- Telephone link using tel protocol -->
+      <a href="tel:+3468888899">Telephone</a>
+
+      <!-- WhatsApp link using custom protocol for direct messaging -->
+      <a href="whatsapp://send?text=Hello, jdomingu19!">WhatsApp</a>
+    </footer>
+  </body>
+</html>
