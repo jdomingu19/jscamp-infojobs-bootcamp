@@ -1,6 +1,6 @@
 <!-- JSCamp InfoJobs Bootcamp @jdomingu19 -->
 <!-- Full-Stack Web Bootcamp @midudev -->
-<!-- Module 2: HTML & CSS: Complete CSS Course -->
+<!-- Module 2: HTML & CSS: CSS from Scratch -->
 <!doctype html>
 <html>
   <head>
@@ -41,39 +41,42 @@
     <!-- Define favicon for the page -->
     <link rel="icon" type="image/jpg" href="./images/me.png" />
 
-    <!-- ? -->
+    <!-- CSS Stylesheet embedded in HTML -->
     <style>
-      /* ? */
+      /* CSS syntax reminder */
       /* selector {
         property: value; <- declaration
       } */
 
-      /* ? */
+      /* Heading styles */
       h1 {
         /* color: brown; */
 
+        /* Hexadecimal color */
         /* color: #0099ff; */
-        /* color: #09f; <- same as #0099ff */
+        /* color: #09f; <- shorthand for #0099ff */
 
+        /* Transparency examples */
         /* color: transparent; */
         /* color: #RRGGBBAA; <-RGBA hex notation */
-        /* color: #00000055; <- transparent hex color */
+        /* color: #00000055; <- semi-transparent black */
         /* color: #0099ffff; <- hex color with full opacity */
         /* color: #0099ff00; <- hex color with full transparency */
 
-        /* color: rgba(0, 0, 0, 0.333); <- legacy */
-        /* color: hsla(0, 0%, 0%, 0.5); */
-        /* color: rgb(0 0 0 / 50%); */
-        /* color: oklch(0% 0 0 / 0.5); */
+        /* Modern and legacy color functions */
+        /* color: rgba(0, 0, 0, 0.333); <- legacy RGBA */
+        /* color: hsla(0, 0%, 0%, 0.5); <- HSL with alpha */
+        /* color: rgb(0 0 0 / 50%); <- modern RGB with alpha */
+        /* color: oklch(0% 0 0 / 0.5); <- OKLCH with alpha transparency */
 
-        color: #0099ffff;
+        color: #0099ffff; /* Final applied color */
         border-width: 3px;
         border-style: solid;
-        border-color: currentColor; /* <- #0099ffff */
-        font-family: monospace;
+        border-color: currentColor; /* Uses the current text color (#0099ffff) */
+        /* font-family: monospace; <- optional font style */
       }
 
-      /* ? */
+      /* Body styles */
       body {
         background: #f0f0f0;
         font-family:
@@ -90,82 +93,161 @@
           sans-serif;
       }
 
-      /* ? */
+      /* Anchor element (default style commented out) */
       /* a {
         color: brown;
       } */
 
-      /* ? */
+      /* Link styles */
       .link {
         color: brown;
       }
 
-      /* ? */
+      /* Link hover state */
       .link:hover {
         color: darkslategrey;
         /* border: 5px solid darkslategrey; */
         outline: 5px solid darkslategrey;
       }
 
-      /* ? */
+      /* Link active state */
       .link:active {
         outline: 5px solid gray;
       }
 
-      /* ? */
+      /* Link focus state */
       .link:focus {
         border: 1px solid brown;
       }
 
-      /* ? */
+      /* Button styles */
       #openModal {
         background: brown;
         color: #fff;
         border: 0;
       }
 
-      /* ? */
+      /* Paragraph description styles */
       .description {
         border: 1px solid brown;
         /* Border applied to the <p> element */
-        /* Inner <strong> child does not inherit the border */
+        /* Nested <strong> child does not inherit the border automatically */
       }
 
-      /* ? */
+      /* Strong element inside description */
       .description strong {
         border: inherit;
         /* Border applied to the <p> element */
-        /* Inner <strong> child does inherit the border */
+        /* Explicitly inherits the border from parent <p> */
+        /* Inner <strong> child now inherits the border */
 
         font-size: initial;
         /* Reset font size to the browser's default value */
-        /* Ensures the <strong> element does not inherit or override custom font sizing */
+        /* Ensures <strong> does not inherit or override custom font sizing */
       }
 
-      /* ? */
+      /* List item styles (default commented out) */
       /* li {
         color: brown;
       } */
 
-      /* ? */
+      /* First list item */
       li:first-child {
         color: brown;
       }
 
-      /* ? */
+      /* Last list item */
       li:last-child {
         color: darkslategray;
       }
 
-      /* ? */
-      /* article {
-        font-size: 24px;
-      } */
-
-      /* ? */
-      /* article > p {
+      /* Child combinator example */
+      /* p > span {
         color: #09f;
       } */
+
+      /* General sibling combinator example */
+      /* p ~ span {
+        color: brown;
+      } */
+
+      /* Adjacent sibling combinator example */
+      /* p + span {
+        color: brown;
+      } */
+
+      /* Operators examples in CSS */
+      /* 1. > Child combinator: selects direct children only */
+      /* 2. ~ General sibling combinator: selects all siblings that follow */
+      /* 3. + Adjacent sibling combinator: selects the next sibling immediately after */
+
+      /* Fallback example in CSS */
+      /* The second color (oklch) is a modern color function with alpha transparency */
+      /* Browsers that do not support oklch will use the fallback (#09f) */
+      /* The first color (#09f) is a basic hex value supported by all browsers */
+      /* p {
+        color: #09f;
+        color: oklch(0% 0 0 / 0.5);
+      } */
+
+      /* Specificity hierarchy in CSS */
+      /* 0. !important declarations (override all other rules) */
+      /* 1. Inline styles (highest specificity without !important) */
+      /* 2. ID selectors */
+      /* 3. Class selectors and attribute selectors */
+      /* 4. Pseudo-classes (e.g., :hover, :active) */
+      /* 5. Element selectors (lowest specificity) */
+
+      /* CSS Absolute Units */
+      /* 1. px   -> Pixels: relative to the screen resolution, most common absolute unit */
+      /* 2. pt   -> Points: 1/72 of an inch, used in print media */
+      /* 3. pc   -> Picas: 1 pica = 12 points, used in typography */
+      /* 4. in   -> Inches: physical measurement unit (1in = 96px) */
+      /* 5. cm   -> Centimeters: physical measurement unit (1cm ≈ 37.8px) */
+      /* 6. mm   -> Millimeters: physical measurement unit (1mm ≈ 3.78px) */
+      /* 7. Q    -> Quarter-millimeters: 1Q = 1/40th of a cm */
+
+      /* CSS Relative Units */
+      /* 1. em   -> Relative to the font size of the element (scales with parent font size) */
+      /* 2. rem  -> Relative to the font size of the root element (html) */
+      /* 3. %    -> Percentage: relative to the parent element’s property (e.g., width, padding) */
+      /* 4. vw   -> Viewport width: 1vw = 1% of the viewport’s width */
+      /* 5. vh   -> Viewport height: 1vh = 1% of the viewport’s height */
+      /* 6. vmin -> Relative to the smaller dimension of the viewport (width or height) */
+      /* 7. vmax -> Relative to the larger dimension of the viewport (width or height) */
+      /* 8. ex   -> Relative to the x-height of the current font (height of lowercase “x”) */
+      /* 9. ch   -> Relative to the width of the “0” glyph in the current font */
+
+      /* CSS Box Model and Display Options */
+      /* 1. display: inline -> width and height properties have no effect */
+      /* 2. display: block -> element takes full available width and respects width/height */
+      /* 3. display: inline-block -> behaves like inline but allows width and height */
+      /* 4. display: flex -> enables flexbox layout for children */
+      /* 5. display: grid -> enables grid layout for children */
+
+      /* Default inline elements in HTML */
+      /* 1. <span> -> generic inline container */
+      /* 2. <a> -> anchor/link element */
+      /* 3. <strong>, <em>, <b>, <i> -> inline text formatting elements */
+      /* 4. <img> -> inline replaced element */
+      /* 5. <label> -> inline form label */
+
+      /* Default block elements in HTML */
+      /* 1. <p> -> paragraph element */
+      /* 2. <div> -> generic block container */
+      /* 3. <h1> to <h6> -> heading elements */
+      /* 4. <section>, <article>, <aside>, <nav> -> semantic block containers */
+      /* 5. <ul>, <ol>, <li> -> list structures */
+
+      /* Box-sizing CSS options */
+      /* 1. content-box -> Default behavior: width/height apply only to content, excluding padding and border */
+      /* 2. border-box  -> Width/height include content, padding, and border (recommended for layouts) */
+      /* 3. inherit     -> Element inherits box-sizing value from its parent */
+      /* 4. initial     -> Resets box-sizing to the default value (content-box) */
+      /* 5. unset       -> Removes any assigned value: acts as inherit if parent has a value, otherwise initial */
+      /* 6. revert      -> Rolls back to the value defined by the user agent stylesheet */
+      /* 7. padding-box -> Width/height include content and padding, but exclude border (non-standard, limited support) */
+      /* 8. margin-box  -> Width/height include content, padding, border, and margin (non-standard, experimental) */
     </style>
   </head>
   <body>
