@@ -47,3 +47,13 @@ function askForUserName() {
 }
 
 askForUserName();
+
+// 5. confirm() example
+let yourAnswer = confirm(
+  "Are you enjoying and learning a lot in this Bootcamp?",
+);
+
+// Using a ternary operator to handle the user's response
+!yourAnswer
+  ? console.log("No, not as much as I expected... 👀")
+  : console.log("Yes, I am learning and enjoying it! 🎉");
