@@ -1,0 +1,165 @@
+<!-- JSCamp InfoJobs Bootcamp @jdomingu19 -->
+<!-- Full-Stack Web Bootcamp @midudev -->
+<!-- Module 3: JavaScript: Jobs HTML -->
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>DevJobs - Jobs</title>
+    <meta charset="UTF-8" />
+    <meta
+      name="description"
+      content="List with jobs and filters to find the job of your dreams."
+    />
+
+    <!-- External CSS file linked to the HTML document -->
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+
+  <body>
+    <!-- The header contains the site branding and navigation -->
+    <header>
+      <h1>
+        <svg
+          fill="none"
+          stroke="currentColor"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <polyline points="16 18 22 12 16 6"></polyline>
+          <polyline points="8 6 2 12 8 18"></polyline>
+        </svg>
+        DevJobs
+      </h1>
+
+      <nav>
+        <a href="./index.html">Home Page</a>
+        <!-- <a href="./jobs.html">Jobs</a> -->
+      </nav>
+
+      <div>
+        <a href="">Post a job</a>
+        <!-- <a href="">Login</a> -->
+      </div>
+    </header>
+
+    <!-- The main section holds the core page content -->
+    <main>
+      <!-- Job listings container: groups multiple job cards with consistent styling -->
+      <div class="jobs-listings">
+        <article class="job-listing-card">
+          <!-- Job details: title, company, location, and description -->
+          <div>
+            <h3>Software Engineer</h3>
+            <small>Tech Solutions Inc. | Remote</small>
+            <p>
+              We are looking for a software engineer with development experience
+              web and knowledge in JavaScript, React and Node.js. The candidate
+              ideally you should be able to work in a team and have good
+              communication skills.
+            </p>
+          </div>
+          <!-- Apply button: triggers job application action -->
+          <button class="button-apply-job" id="button-important">Apply</button>
+        </article>
+
+        <article class="job-listing-card">
+          <!-- Job details: title, company, location, and description -->
+          <div>
+            <h3>Data Analyst</h3>
+            <small>Data Driven Co. | Paris</small>
+            <p>
+              We are looking for a data analyst with experience in managing of
+              large data sets and visualization tools. If Requires knowledge of
+              SQL, Python and R.
+            </p>
+          </div>
+          <!-- Apply button: triggers job application action -->
+          <button class="button-apply-job">Apply</button>
+        </article>
+
+        <article class="job-listing-card">
+          <!-- Job details: title, company, location, and description -->
+          <div>
+            <h3>Mobile Application Developer</h3>
+            <small>Mobile Apps Ltd. | Barcelona</small>
+            <p>
+              We are looking for an experienced mobile application developer on
+              iOS and/or Android. The candidate must have knowledge in Swift,
+              Kotlin and user interface development.
+            </p>
+          </div>
+          <!-- Apply button: triggers job application action -->
+          <button class="button-apply-job">Apply</button>
+        </article>
+
+        <article class="job-listing-card">
+          <!-- Job details: title, company, location, and description -->
+          <div>
+            <h3>DevOps Engineer</h3>
+            <small>Cloud Services SA | Remote</small>
+            <p>
+              We are looking for a DevOps engineer with experience in cloud
+              infrastructure management, process automation and continuous
+              integration tools. Knowledge required on AWS, Azure or GCP.
+            </p>
+          </div>
+          <!-- Apply button: triggers job application action -->
+          <button class="button-apply-job">Apply</button>
+        </article>
+      </div>
+
+      <!-- Pagination navigation: allows users to move between pages of job listings -->
+      <nav class="pagination">
+        <!-- Previous page button with left arrow icon -->
+        <a href="#">
+          <svg
+            width="16"
+            height="16"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <path d="M15 6l-6 6l6 6" />
+          </svg>
+        </a>
+
+        <!-- Page number links -->
+        <a class="is-active" href="#">1</a>
+        <a href="#">2</a>
+        <a href="#">3</a>
+        <a href="#">4</a>
+        <a href="#">5</a>
+
+        <!-- Next page button with right arrow icon -->
+        <a href="#">
+          <svg
+            width="16"
+            height="16"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            class="icon icon-tabler icons-tabler-outline icon-tabler-chevron-right"
+          >
+            <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+            <path d="M9 6l6 6l-6 6" />
+          </svg>
+        </a>
+      </nav>
+    </main>
+
+    <!-- The footer provides closing information and legal notice -->
+    <footer>
+      <small>&copy 2026 DevJobs. All rights reserved.</small>
+    </footer>
+  </body>
+</html>
