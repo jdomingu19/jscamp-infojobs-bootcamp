@@ -393,3 +393,8 @@ article {
     }
   }
 }
+
+/* Styling for the important button */
+#button-important {
+  background: var(--primary-light);
+}

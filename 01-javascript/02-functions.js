@@ -57,3 +57,32 @@ let yourAnswer = confirm(
 !yourAnswer
   ? console.log("No, not as much as I expected... 👀")
   : console.log("Yes, I am learning and enjoying it! 🎉");
+
+// 6. Arrow function example
+// Arrow functions provide a shorter syntax for defining functions.
+// This version uses an explicit return inside curly braces.
+const greetArrow = (name) => {
+  return `Hello, ${name}!`;
+};
+
+console.log(greetArrow); // [Function: greetArrow]
+console.log(typeof greetArrow); // function
+console.log(greetArrow("Jesús")); // Hello, Jesús!
+
+// 7. Arrow function with implicit return
+// When the function body is a single expression,
+// curly braces and 'return' can be omitted.
+const greetArrowShort = (name) => `Hello, ${name}!`;
+
+console.log(greetArrowShort); // [Function: greetArrowShort ]
+console.log(typeof greetArrowShort); // function
+console.log(greetArrowShort("Jesús")); // Hello, Jesús!
+
+// 8. Arrow function with array methods
+// Arrow functions are often used as callbacks,
+// e.g., with map() to transform arrays.
+const numbers = [1, 2, 3, 4, 5];
+const doubled = numbers.map((n) => n * 2);
+
+console.log({ numbers }); // { numbers: [ 1, 2, 3, 4, 5 ] }
+console.log({ doubled }); // { doubled: [ 2, 4, 6, 8, 10 ] }
