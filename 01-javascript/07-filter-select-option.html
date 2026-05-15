@@ -1,0 +1,65 @@
+<!-- JSCamp InfoJobs Bootcamp @jdomingu19 -->
+<!-- Full-Stack Web Bootcamp @midudev -->
+<!-- Module 3: JavaScript: Filter Select Option -->
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>JavaScript - Filter Select Option</title>
+    <meta charset="UTF-8" />
+    <meta
+      name="description"
+      content="List with jobs and filters to find the job of your dreams."
+    />
+
+    <!-- External CSS file linked to the HTML document -->
+    <link rel="stylesheet" href="./styles.css" />
+
+    <!-- Linking an external JavaScript file -->
+    <script type="module" src="./07-filter-select-option.js"></script>
+  </head>
+
+  <body>
+    <!-- The main section holds the core page content -->
+    <main>
+      <!-- Section dedicated to demonstrating DOM Filter Select Option -->
+      <section>
+        <!-- Title and introductory text for the DOM Filter Select Option demonstration -->
+        <h1>DOM Filter Select Option</h1>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit
+          expedita similique voluptas velit. Rem quo, quis eius repellendus
+          consequuntur nobis ea obcaecati ducimus accusantium in beatae
+          doloremque iure perferendis veniam.
+        </p>
+
+        <!-- Dropdown menu to select a technology filter -->
+        <select name="filter-technology" id="filter-technology">
+          <option value="">Technologies</option>
+          <optgroup label="Popular technologies">
+            <option value="typescript">TypeScript</option>
+            <option value="javascript">JavaScript</option>
+            <option value="react">React</option>
+            <option value="nodejs">Node.js</option>
+          </optgroup>
+          <option value="java">Java</option>
+          <hr />
+          <option value="csharp">C#</option>
+          <option value="c">C</option>
+          <option value="cpp">C++</option>
+          <hr />
+          <option value="kotlin">Kotlin</option>
+          <option value="swift">Swift</option>
+        </select>
+
+        <!-- Paragraph element to display the selected filter value dynamically -->
+        <br />
+        <em><p id="filter-value"></p></em>
+      </section>
+    </main>
+
+    <!-- The footer provides closing information and legal notice -->
+    <footer>
+      <small>&copy 2026 DevJobs. All rights reserved.</small>
+    </footer>
+  </body>
+</html>
