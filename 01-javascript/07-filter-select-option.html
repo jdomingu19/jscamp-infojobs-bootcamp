@@ -34,26 +34,42 @@
 
         <!-- Dropdown menu to select a technology filter -->
         <select name="filter-technology" id="filter-technology">
-          <option value="">Technologies</option>
-          <optgroup label="Popular technologies">
-            <option value="typescript">TypeScript</option>
-            <option value="javascript">JavaScript</option>
-            <option value="react">React</option>
-            <option value="nodejs">Node.js</option>
-          </optgroup>
-          <option value="java">Java</option>
-          <hr />
-          <option value="csharp">C#</option>
-          <option value="c">C</option>
-          <option value="cpp">C++</option>
-          <hr />
-          <option value="kotlin">Kotlin</option>
-          <option value="swift">Swift</option>
+          <option value="">Select</option>
+          <option value="option-a">Option A</option>
+          <option value="option-b">Option B</option>
+          <option value="option-c">Option C</option>
         </select>
 
         <!-- Paragraph element to display the selected filter value dynamically -->
         <br />
         <em><p id="filter-value"></p></em>
+        <br />
+
+        <!-- Buttons representing job options that will be shown or hidden based on the selected filter -->
+        <button
+          type="button"
+          id="option-a"
+          class="button-apply-job"
+          style="display: block; margin: 12px"
+        >
+          Option A
+        </button>
+        <button
+          type="button"
+          id="option-b"
+          class="button-apply-job"
+          style="display: block; margin: 12px"
+        >
+          Option B
+        </button>
+        <button
+          type="button"
+          id="option-c"
+          class="button-apply-job"
+          style="display: block; margin: 12px"
+        >
+          Option C
+        </button>
       </section>
     </main>
 
