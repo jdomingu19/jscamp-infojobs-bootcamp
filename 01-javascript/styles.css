@@ -13,6 +13,7 @@
   --primary-dark: #0a3d66;
   --primary-hover: #0d5ba8;
   --primary-light: #09f;
+  --secondary-light: #4caf50;
   --background: #06182a;
   --text-primary: #ffffff;
   --text-secondary: #cbd5e1;
@@ -395,6 +396,16 @@ article {
 }
 
 /* Styling for the important button */
-#button-important {
+/* #button-important {
   background: var(--primary-light);
+} */
+
+/* Base styling for job application buttons */
+.button-apply-job {
+  background: var(--primary-light);
+
+  /* Styling applied when the button has been clicked and marked as 'applied' */
+  &.is-applied {
+    background: var(--secondary-light);
+  }
 }

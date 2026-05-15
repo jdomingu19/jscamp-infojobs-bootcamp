@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="./styles.css" />
 
     <!-- Linking an external JavaScript file -->
-    <script type="module" src="./script.js"></script>
+    <script type="module" src="./main.js"></script>
   </head>
 
   <body>
@@ -50,69 +50,155 @@
 
     <!-- The main section holds the core page content -->
     <main>
-      <!-- Job listings container: groups multiple job cards with consistent styling -->
-      <div class="jobs-listings">
-        <article class="job-listing-card">
-          <!-- Job details: title, company, location, and description -->
-          <div>
-            <h3>Software Engineer</h3>
-            <small>Tech Solutions Inc. | Remote</small>
-            <p>
-              We are looking for a software engineer with development experience
-              web and knowledge in JavaScript, React and Node.js. The candidate
-              ideally you should be able to work in a team and have good
-              communication skills.
-            </p>
-          </div>
-          <!-- Apply button: triggers job application action -->
-          <button class="button-apply-job" id="button-important">Apply</button>
-        </article>
+      <!-- Section dedicated to the job search functionality -->
+      <section class="jobs-search">
+        <h1>Find your next job</h1>
+        <p>Explore thousands of opportunities in the technology sector.</p>
 
-        <article class="job-listing-card">
-          <!-- Job details: title, company, location, and description -->
-          <div>
-            <h3>Data Analyst</h3>
-            <small>Data Driven Co. | Paris</small>
-            <p>
-              We are looking for a data analyst with experience in managing of
-              large data sets and visualization tools. If Requires knowledge of
-              SQL, Python and R.
-            </p>
+        <form id="jobs-search-form" role="search">
+          <!-- Search bar with icon and input field -->
+          <div class="search-bar">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              class="icon icon-tabler icons-tabler-outline icon-tabler-search"
+            >
+              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+              <path d="M10 10m-7 0a7 7 0 1 0 14 0a7 7 0 1 0 -14 0" />
+              <path d="M21 21l-6 -6" />
+            </svg>
+            <input
+              type="text"
+              name="search"
+              id="jobs-search-input"
+              required
+              placeholder="Search jobs, companies or skills"
+            />
           </div>
-          <!-- Apply button: triggers job application action -->
-          <button class="button-apply-job">Apply</button>
-        </article>
 
-        <article class="job-listing-card">
-          <!-- Job details: title, company, location, and description -->
-          <div>
-            <h3>Mobile Application Developer</h3>
-            <small>Mobile Apps Ltd. | Barcelona</small>
-            <p>
-              We are looking for an experienced mobile application developer on
-              iOS and/or Android. The candidate must have knowledge in Swift,
-              Kotlin and user interface development.
-            </p>
-          </div>
-          <!-- Apply button: triggers job application action -->
-          <button class="button-apply-job">Apply</button>
-        </article>
+          <!-- Filter options for refining job search results -->
+          <div class="search-filters">
+            <!-- Dropdown to filter jobs by technology -->
+            <select name="technology" id="filter-technology">
+              <option value="">Technologies</option>
+              <optgroup label="Popular technologies">
+                <option value="typescript">TypeScript</option>
+                <option value="javascript">JavaScript</option>
+                <option value="react">React</option>
+                <option value="nodejs">Node.js</option>
+              </optgroup>
+              <option value="java">Java</option>
+              <hr />
+              <option value="csharp">C#</option>
+              <option value="c">C</option>
+              <option value="cpp">C++</option>
+              <hr />
+              <option value="kotlin">Kotlin</option>
+              <option value="swift">Swift</option>
+            </select>
 
-        <article class="job-listing-card">
-          <!-- Job details: title, company, location, and description -->
-          <div>
-            <h3>DevOps Engineer</h3>
-            <small>Cloud Services SA | Remote</small>
-            <p>
-              We are looking for a DevOps engineer with experience in cloud
-              infrastructure management, process automation and continuous
-              integration tools. Knowledge required on AWS, Azure or GCP.
-            </p>
+            <!-- Dropdown to filter jobs by location -->
+            <select name="location" id="filter-location">
+              <option value="">Location</option>
+              <option value="remote">Remote</option>
+              <option value="berna">Berna</option>
+              <option value="rome">Rome</option>
+              <option value="paris">Paris</option>
+              <option value="barcelona">Barcelona</option>
+            </select>
+
+            <!-- Dropdown to filter jobs by experience level -->
+            <select name="experience-level" id="filter-experience-level">
+              <option value="">Experience Level</option>
+              <option value="junio">Junior</option>
+              <option value="mid">Mid-level</option>
+              <option value="senior">Senior</option>
+              <option value="lead">Lead</option>
+            </select>
           </div>
-          <!-- Apply button: triggers job application action -->
-          <button class="button-apply-job">Apply</button>
-        </article>
-      </div>
+        </form>
+
+        <!-- Span element to display the selected filter value dynamically -->
+        <span id="filter-selected-value"></span>
+      </section>
+
+      <!-- Section dedicated to displaying search results -->
+      <section>
+        <h2>Search Results</h2>
+
+        <!-- Job listings container: groups multiple job cards with consistent styling -->
+        <div class="jobs-listings">
+          <article class="job-listing-card">
+            <!-- Job details: title, company, location, and description -->
+            <div>
+              <h3>Software Engineer</h3>
+              <small>Tech Solutions Inc. | Remote</small>
+              <p>
+                We are looking for a software engineer with development
+                experience web and knowledge in JavaScript, React and Node.js.
+                The candidate ideally you should be able to work in a team and
+                have good communication skills.
+              </p>
+            </div>
+            <!-- Apply button: triggers job application action -->
+            <button class="button-apply-job" id="button-important">
+              Apply
+            </button>
+          </article>
+
+          <article class="job-listing-card">
+            <!-- Job details: title, company, location, and description -->
+            <div>
+              <h3>Data Analyst</h3>
+              <small>Data Driven Co. | Paris</small>
+              <p>
+                We are looking for a data analyst with experience in managing of
+                large data sets and visualization tools. If Requires knowledge
+                of SQL, Python and R.
+              </p>
+            </div>
+            <!-- Apply button: triggers job application action -->
+            <button class="button-apply-job">Apply</button>
+          </article>
+
+          <article class="job-listing-card">
+            <!-- Job details: title, company, location, and description -->
+            <div>
+              <h3>Mobile Application Developer</h3>
+              <small>Mobile Apps Ltd. | Barcelona</small>
+              <p>
+                We are looking for an experienced mobile application developer
+                on iOS and/or Android. The candidate must have knowledge in
+                Swift, Kotlin and user interface development.
+              </p>
+            </div>
+            <!-- Apply button: triggers job application action -->
+            <button class="button-apply-job">Apply</button>
+          </article>
+
+          <article class="job-listing-card">
+            <!-- Job details: title, company, location, and description -->
+            <div>
+              <h3>DevOps Engineer</h3>
+              <small>Cloud Services SA | Remote</small>
+              <p>
+                We are looking for a DevOps engineer with experience in cloud
+                infrastructure management, process automation and continuous
+                integration tools. Knowledge required on AWS, Azure or GCP.
+              </p>
+            </div>
+            <!-- Apply button: triggers job application action -->
+            <button class="button-apply-job">Apply</button>
+          </article>
+        </div>
+      </section>
 
       <!-- Pagination navigation: allows users to move between pages of job listings -->
       <nav class="pagination">
@@ -161,7 +247,7 @@
     </main>
 
     <!-- The footer provides closing information and legal notice -->
-    <footer>
+    <footer style="padding-bottom: 2000px">
       <small>&copy 2026 DevJobs. All rights reserved.</small>
     </footer>
   </body>

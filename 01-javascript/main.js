@@ -17,3 +17,17 @@ console.log(typeof importantButton); // object
 importantButton.addEventListener("click", () => {
   console.log("Thanks for your interest. We will contact you soon!");
 });
+
+// 4. Selecting all job application buttons by their shared class name
+const buttonsApplyJob = document.querySelectorAll(".button-apply-job");
+
+// 5. Iterating over each button and adding a click event listener
+// When clicked, the button text changes,
+// a CSS class is added, and the button is disabled
+buttonsApplyJob.forEach((button) => {
+  button.addEventListener("click", () => {
+    button.textContent = "Applied!";
+    button.classList.add("is-applied");
+    button.disabled = true;
+  });
+});
