@@ -48,3 +48,20 @@ jobsListingSection.addEventListener("click", (event) => {
     element.disabled = true;
   }
 });
+
+// Select the location dropdown and the message span to show the chosen value
+const locationFilter = document.querySelector("#filter-location");
+const message = document.querySelector("#filter-selected-value");
+
+// Add a change event listener to update the message when the user selects a location
+locationFilter.addEventListener("change", () => {
+  // Store the selected value from the dropdown
+  const selectedValue = locationFilter.value;
+
+  // Display the selected location or clear the message if no option is chosen
+  if (selectedValue) {
+    message.textContent = `You have selected: ${selectedValue}`;
+  } else {
+    message.textContent = "";
+  }
+});
