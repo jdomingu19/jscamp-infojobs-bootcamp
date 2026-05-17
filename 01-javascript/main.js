@@ -65,3 +65,34 @@ locationFilter.addEventListener("change", () => {
     message.textContent = "";
   }
 });
+
+// Select the job search input field
+const searchJobInput = document.querySelector("#jobs-search-input");
+
+// Add an input event listener to log what the user types
+searchJobInput.addEventListener("input", () => {
+  console.log("Writing:", searchJobInput.value);
+});
+
+// Add a blur event listener to detect when the input loses focus
+searchJobInput.addEventListener("blur", () => {
+  console.log("Input has lost focus");
+});
+
+// Select the job search form element
+const searchJobForm = document.querySelector("#jobs-search-form");
+
+// Add a submit event listener to prevent default and log submission
+searchJobForm.addEventListener("submit", (event) => {
+  event.preventDefault();
+  console.log("You have submitted");
+});
+
+// Add a keydown event listener to log pressed keys and modifier states
+document.addEventListener("keydown", (event) => {
+  console.log("Key pressed:", event.key);
+  console.log("Is the shift key pressed?:", event.shiftKey);
+  console.log("Is the alt key pressed?:", event.altKey);
+  console.log("Is the ctrl key pressed?:", event.ctrlKey);
+  console.log("Is the meta key pressed?:", event.metaKey);
+});
