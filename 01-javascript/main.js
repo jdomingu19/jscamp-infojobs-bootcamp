@@ -33,66 +33,93 @@
 // });
 
 // Selecting the job listings section container
-const jobsListingSection = document.querySelector(".jobs-listings");
+// const jobsListingSection = document.querySelector(".jobs-listings");
 
 // Adding a single event listener to the container
 // This demonstrates event delegation applied to job listing buttons
-jobsListingSection.addEventListener("click", (event) => {
-  // Storing the element that triggered the event
-  const element = event.target;
+// jobsListingSection.addEventListener("click", (event) => {
+//   // Storing the element that triggered the event
+//   const element = event.target;
 
-  // Checking if the clicked element is a job application button
-  if (element.classList.contains("button-apply-job")) {
-    element.textContent = "Applied!";
-    element.classList.add("is-applied");
-    element.disabled = true;
-  }
-});
+//   // Checking if the clicked element is a job application button
+//   if (element.classList.contains("button-apply-job")) {
+//     element.textContent = "Applied!";
+//     element.classList.add("is-applied");
+//     element.disabled = true;
+//   }
+// });
 
 // Select the location dropdown and the message span to show the chosen value
-const locationFilter = document.querySelector("#filter-location");
-const message = document.querySelector("#filter-selected-value");
+// const locationFilter = document.querySelector("#filter-location");
+// const message = document.querySelector("#filter-selected-value");
 
 // Add a change event listener to update the message when the user selects a location
-locationFilter.addEventListener("change", () => {
-  // Store the selected value from the dropdown
-  const selectedValue = locationFilter.value;
+// locationFilter.addEventListener("change", () => {
+//   // Store the selected value from the dropdown
+//   const selectedValue = locationFilter.value;
 
-  // Display the selected location or clear the message if no option is chosen
-  if (selectedValue) {
-    message.textContent = `You have selected: ${selectedValue}`;
-  } else {
-    message.textContent = "";
-  }
-});
+//   // Display the selected location or clear the message if no option is chosen
+//   if (selectedValue) {
+//     message.textContent = `You have selected: ${selectedValue}`;
+//   } else {
+//     message.textContent = "";
+//   }
+// });
 
 // Select the job search input field
-const searchJobInput = document.querySelector("#jobs-search-input");
+// const searchJobInput = document.querySelector("#jobs-search-input");
 
 // Add an input event listener to log what the user types
-searchJobInput.addEventListener("input", () => {
-  console.log("Writing:", searchJobInput.value);
-});
+// searchJobInput.addEventListener("input", () => {
+//   console.log("Writing:", searchJobInput.value);
+// });
 
 // Add a blur event listener to detect when the input loses focus
-searchJobInput.addEventListener("blur", () => {
-  console.log("Input has lost focus");
-});
+// searchJobInput.addEventListener("blur", () => {
+//   console.log("Input has lost focus");
+// });
 
 // Select the job search form element
-const searchJobForm = document.querySelector("#jobs-search-form");
+// const searchJobForm = document.querySelector("#jobs-search-form");
 
 // Add a submit event listener to prevent default and log submission
-searchJobForm.addEventListener("submit", (event) => {
-  event.preventDefault();
-  console.log("You have submitted");
-});
+// searchJobForm.addEventListener("submit", (event) => {
+//   event.preventDefault();
+//   console.log("You have submitted");
+// });
 
 // Add a keydown event listener to log pressed keys and modifier states
-document.addEventListener("keydown", (event) => {
-  console.log("Key pressed:", event.key);
-  console.log("Is the shift key pressed?:", event.shiftKey);
-  console.log("Is the alt key pressed?:", event.altKey);
-  console.log("Is the ctrl key pressed?:", event.ctrlKey);
-  console.log("Is the meta key pressed?:", event.metaKey);
+// document.addEventListener("keydown", (event) => {
+//   console.log("Key pressed:", event.key);
+//   console.log("Is the shift key pressed?:", event.shiftKey);
+//   console.log("Is the alt key pressed?:", event.altKey);
+//   console.log("Is the ctrl key pressed?:", event.ctrlKey);
+//   console.log("Is the meta key pressed?:", event.metaKey);
+// });
+
+// Select the location dropdown, the message span, and all job listing cards
+const filterLocation = document.querySelector("#filter-location");
+const filterSelectedValue = document.querySelector("#filter-selected-value");
+const jobsCards = document.querySelectorAll(".job-listing-card");
+
+// Add a change event listener to update the message and filter job cards
+filterLocation.addEventListener("change", () => {
+  const selectedValue = filterLocation.value;
+
+  // Show selected location message or clear it if empty
+  selectedValue
+    ? (filterSelectedValue.textContent = `You have selected: ${selectedValue}`)
+    : (filterSelectedValue.textContent = "");
+
+  // Show or hide job cards based on matching data-location attribute
+  jobsCards.forEach((job) => {
+    // Retrieve the location from the job card dataset
+    // const location = job.dataset.location;
+    const location = job.getAttribute("data-location");
+
+    // Display job card if location matches or no filter is selected
+    selectedValue === "" || selectedValue === location
+      ? (job.style.display = "flex")
+      : (job.style.display = "none");
+  });
 });
