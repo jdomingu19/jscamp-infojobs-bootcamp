@@ -88,30 +88,60 @@
             <!-- Dropdown to filter jobs by technology -->
             <select name="technology" id="filter-technology">
               <option value="">Technologies</option>
-              <optgroup label="Popular technologies">
-                <option value="typescript">TypeScript</option>
+              <optgroup label="Frontend">
+                <option value="html">HTML</option>
+                <option value="css">CSS</option>
                 <option value="javascript">JavaScript</option>
                 <option value="react">React</option>
-                <option value="nodejs">Node.js</option>
+                <option value="vue">Vue</option>
               </optgroup>
-              <option value="java">Java</option>
-              <hr />
-              <option value="csharp">C#</option>
-              <option value="c">C</option>
-              <option value="cpp">C++</option>
-              <hr />
-              <option value="kotlin">Kotlin</option>
-              <option value="swift">Swift</option>
+
+              <optgroup label="Backend">
+                <option value="node">Node.js</option>
+                <option value="python">Python</option>
+                <option value="php">PHP</option>
+                <option value="java">Java</option>
+              </optgroup>
+
+              <optgroup label="Database">
+                <option value="mysql">MySQL</option>
+                <option value="mongodb">MongoDB</option>
+                <option value="postgresql">PostgreSQL</option>
+              </optgroup>
             </select>
 
             <!-- Dropdown to filter jobs by location -->
             <select name="location" id="filter-location">
               <option value="">Location</option>
               <option value="remote">Remote</option>
-              <option value="berna">Berna</option>
-              <option value="rome">Rome</option>
-              <option value="paris">Paris</option>
-              <option value="barcelona">Barcelona</option>
+
+              <!-- Spain group -->
+              <optgroup label="Spain">
+                <option value="barcelona">Barcelona</option>
+                <option value="valencia">Valencia</option>
+                <option value="madrid">Madrid</option>
+              </optgroup>
+
+              <!-- France group -->
+              <optgroup label="France">
+                <option value="paris">Paris</option>
+                <option value="lyon">Lyon</option>
+                <option value="marseille">Marseille</option>
+              </optgroup>
+
+              <!-- Italy group -->
+              <optgroup label="Italy">
+                <option value="rome">Rome</option>
+                <option value="milan">Milán</option>
+                <option value="florence">Florence</option>
+              </optgroup>
+
+              <!-- Switzerland group -->
+              <optgroup label="Switzerland">
+                <option value="berna">Berna</option>
+                <option value="zurich">Zurich</option>
+                <option value="ginebra">Geneva</option>
+              </optgroup>
             </select>
 
             <!-- Dropdown to filter jobs by experience level -->
