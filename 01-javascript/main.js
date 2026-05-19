@@ -33,21 +33,21 @@
 // });
 
 // Selecting the job listings section container
-// const jobsListingSection = document.querySelector(".jobs-listings");
+const jobsListingSection = document.querySelector(".jobs-listings");
 
 // Adding a single event listener to the container
 // This demonstrates event delegation applied to job listing buttons
-// jobsListingSection.addEventListener("click", (event) => {
-//   // Storing the element that triggered the event
-//   const element = event.target;
+jobsListingSection.addEventListener("click", (event) => {
+  // Storing the element that triggered the event
+  const element = event.target;
 
-//   // Checking if the clicked element is a job application button
-//   if (element.classList.contains("button-apply-job")) {
-//     element.textContent = "Applied!";
-//     element.classList.add("is-applied");
-//     element.disabled = true;
-//   }
-// });
+  // Checking if the clicked element is a job application button
+  if (element.classList.contains("button-apply-job")) {
+    element.textContent = "Applied!";
+    element.classList.add("is-applied");
+    element.disabled = true;
+  }
+});
 
 // Select the location dropdown and the message span to show the chosen value
 // const locationFilter = document.querySelector("#filter-location");
@@ -121,3 +121,18 @@ filterLocation.addEventListener("change", () => {
     job.classList.toggle("is-hidden", !isShown);
   });
 });
+
+// Fetch a local JSON file and log its job listings
+fetch("./data.json")
+  // Convert the response into JSON format
+  .then((response) => {
+    return response.json();
+  })
+  // Log the parsed JSON object in the console
+  .then((jobsJSON) => {
+    console.log(jobsJSON);
+  })
+  // Handle any network or parsing errors
+  .catch((error) => {
+    console.log(error);
+  });
