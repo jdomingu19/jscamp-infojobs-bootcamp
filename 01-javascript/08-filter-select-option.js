@@ -1,6 +1,6 @@
 // JSCamp InfoJobs Bootcamp @jdomingu19
 // Full-Stack Web Bootcamp @midudev
-// Module 3: JavaScript: Optional Chaining
+// Module 3: JavaScript: Filter Select Option
 
 // 1. Select the dropdown filter and the paragraph to display the chosen value
 const filter = document.querySelector("#filter-technology");
