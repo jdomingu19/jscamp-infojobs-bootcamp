@@ -12,9 +12,9 @@ filterLocation.addEventListener("change", () => {
   const selectedValue = filterLocation.value;
 
   // Show selected location message or clear it if empty
-  selectedValue
-    ? (filterSelectedValue.textContent = `You have selected: ${selectedValue}`)
-    : (filterSelectedValue.textContent = "");
+  // selectedValue
+  //   ? (filterSelectedValue.textContent = `You have selected: ${selectedValue}`)
+  //   : (filterSelectedValue.textContent = "");
 
   // Show or hide job cards based on matching data-location attribute
   jobsCards.forEach((job) => {
