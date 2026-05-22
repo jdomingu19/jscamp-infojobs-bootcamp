@@ -14,17 +14,23 @@
     <!-- External CSS file linked to the HTML document -->
     <link rel="stylesheet" href="./styles.css" />
 
-    <!-- Load React and ReactDOM from esm.sh CDN and render a simple element -->
+    <!-- Load React and ReactDOM from esm.sh CDN -->
     <script type="module">
       import React from "https://esm.sh/react?dev";
       import ReactDOM from "https://esm.sh/react-dom/client?dev";
 
-      // Create a React element: <h1 style="color:#09f">Hello, React.js!</h1>
-      const title = React.createElement(
-        "h1",
-        { style: { color: "#09f" } },
-        "Hello, React.js!",
-      );
+      // Expose React and ReactDOM globally for use with Babel transpilation
+      window.React = React;
+      window.ReactDOM = ReactDOM;
+    </script>
+
+    <!-- Load Babel standalone to transpile JSX directly in the browser -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <!-- Use type='text/babel' so Babel can transpile JSX into JavaScript -->
+    <script type="text/babel">
+      // Create a React element using JSX syntax instead of React.createElement
+      const title = <h1 style={{ color: "#09f" }}>Hello, React.js!</h1>;
 
       // Select the root container and render the React element inside it
       const rootElement = document.querySelector("#root");
