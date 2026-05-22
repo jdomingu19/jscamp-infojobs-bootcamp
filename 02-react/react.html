@@ -32,10 +32,26 @@
       // Create a React element using JSX syntax instead of React.createElement
       const title = <h1 style={{ color: "#09f" }}>Hello, React.js!</h1>;
 
-      // Select the root container and render the React element inside it
+      // Functional component that greets a user with a customizable name and color
+      function GreetUser({ name, color }) {
+        return <h2 style={{ color: color }}>Hello, {name}!</h2>;
+      }
+
+      // Main App component that renders multiple GreetUser components inside a container
+      function App() {
+        return (
+          <div>
+            <GreetUser name="jdomingu19" color="#09f" />
+            <GreetUser name="midudev" color="#0ef" />
+            <GreetUser name="mouredev" color="#0f9" />
+          </div>
+        );
+      }
+
+      // Select the root container and render the React App inside it
       const rootElement = document.querySelector("#root");
       const root = ReactDOM.createRoot(rootElement);
-      root.render(title);
+      root.render(<App />);
     </script>
   </head>
 
