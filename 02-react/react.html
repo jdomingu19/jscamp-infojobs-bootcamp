@@ -29,21 +29,53 @@
 
     <!-- Use type='text/babel' so Babel can transpile JSX into JavaScript -->
     <script type="text/babel">
-      // Create a React element using JSX syntax instead of React.createElement
-      const title = <h1 style={{ color: "#09f" }}>Hello, React.js!</h1>;
-
-      // Functional component that greets a user with a customizable name and color
-      function GreetUser({ name, color }) {
-        return <h2 style={{ color: color }}>Hello, {name}!</h2>;
+      // Functional component that renders a single job card with props and dataset attributes
+      function JobCard({ data, title, company, location, description }) {
+        return (
+          <article
+            className="job-listing-card"
+            data-technology={data?.technology}
+            data-location={data?.location}
+            data-level={data?.level}
+          >
+            <div>
+              <h3>{title}</h3>
+              <small>
+                sma {company} | {location}
+              </small>
+              <p>{description}</p>
+            </div>
+            <button className="button-apply-job">Apply</button>
+          </article>
+        );
       }
 
-      // Main App component that renders multiple GreetUser components inside a container
+      // Main App component that renders multiple JobCard components inside a listings container
       function App() {
         return (
-          <div>
-            <GreetUser name="jdomingu19" color="#09f" />
-            <GreetUser name="midudev" color="#0ef" />
-            <GreetUser name="mouredev" color="#0f9" />
+          <div className="jobs-listings">
+            <JobCard
+              title="Frontend Developer"
+              company="Tech Solutions Inc."
+              location="Remote"
+              description="We are looking for a frontend developer with experience in React, TypeScript and Tailwind CSS."
+              data={{
+                technology: ["react", "typescript", "tailwindcss"],
+                location: "remote",
+                level: "mid-level",
+              }}
+            />
+            <JobCard
+              title="Senior Software Engineer"
+              company="Data Driven Co."
+              location="Barcelona"
+              description="We are looking for a software engineer with experience in web development."
+              data={{
+                technology: ["typescript", "next.js", "node.js"],
+                location: "barcelona",
+                level: "senior",
+              }}
+            />
           </div>
         );
       }
@@ -94,8 +126,11 @@
       <!-- Section dedicated to the job search functionality -->
       <section class="jobs-search">
         <h1>React.js - First Steps</h1>
+      </section>
 
-        <!-- Root container where React will mount and render elements -->
+      <section>
+        <h2>Available Jobs</h2>
+        <!-- Root container where React will mount and render the App component -->
         <div id="root"></div>
       </section>
     </main>
