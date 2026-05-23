@@ -31,6 +31,11 @@
     <script type="text/babel">
       // Functional component that renders a single job card with props and dataset attributes
       function JobCard({ data, title, company, location, description }) {
+        // Event handler that shows an alert when the Apply button is clicked
+        function handleClick() {
+          alert(`You have applied to ${title}`);
+        }
+
         return (
           <article
             className="job-listing-card"
@@ -45,7 +50,9 @@
               </small>
               <p>{description}</p>
             </div>
-            <button className="button-apply-job">Apply</button>
+            <button className="button-apply-job" onClick={handleClick}>
+              Apply
+            </button>
           </article>
         );
       }
