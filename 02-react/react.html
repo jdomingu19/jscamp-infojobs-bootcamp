@@ -31,10 +31,19 @@
     <script type="text/babel">
       // Functional component that renders a single job card with props and dataset attributes
       function JobCard({ data, title, company, location, description }) {
-        // Event handler that shows an alert when the Apply button is clicked
+        // useState hook to track whether the job has been applied
+        const [isApplied, setApplied] = React.useState(false);
+
+        // Event handler that toggles the applied state when the button is clicked
         function handleClick() {
-          alert(`You have applied to ${title}`);
+          // Toggle between applied and not applied states
+          // isApplied ? setApplied(false) : setApplied(true);
+          setApplied(!isApplied);
         }
+
+        // Dynamic button text and CSS class based on applied state
+        const buttonText = isApplied ? "Applied!" : "Apply";
+        const buttonClass = isApplied ? "is-applied" : "";
 
         return (
           <article
@@ -50,8 +59,12 @@
               </small>
               <p>{description}</p>
             </div>
-            <button className="button-apply-job" onClick={handleClick}>
-              Apply
+            <button
+              className={`button-apply-job ${buttonClass}`}
+              onClick={handleClick}
+              disabled={isApplied}
+            >
+              {buttonText}
             </button>
           </article>
         );
