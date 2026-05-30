@@ -2,33 +2,14 @@
 // Full-Stack Web Bootcamp @midudev
 // Module 4: React: src/App.jsx
 
+import Header from "./components/Header";
+import Footer from "./components/Footer";
+import JobCard from "./components/JobCard";
+
 function App() {
   return (
     <>
-      {/* The header contains the site branding and navigation */}
-      <header>
-        <h1>
-          <svg
-            fill="none"
-            stroke="currentColor"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth="2"
-            viewBox="0 0 24 24"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <polyline points="16 18 22 12 16 6"></polyline>
-            <polyline points="8 6 2 12 8 18"></polyline>
-          </svg>
-          DevJobs
-        </h1>
-
-        <nav>
-          <a href="./index.html">Home Page</a>
-          {/* <a href="./jobs.html">Jobs</a> */}
-        </nav>
-      </header>
-
+      <Header />
       {/* The main section holds the core page content */}
       <main>
         {/* Section dedicated to the job search functionality */}
@@ -145,7 +126,31 @@ function App() {
           <h2>Search Results</h2>
 
           {/* Job listings container: groups multiple job cards with consistent styling */}
-          <div className="jobs-listings"></div>
+          <div className="jobs-listings">
+            {/* TODO: Create dynamic JobCard elements with data.json */}
+            <JobCard
+              title="Frontend Developer"
+              company="Tech Solutions Inc."
+              location="Remote"
+              description="We are looking for a frontend developer with experience in React, TypeScript and Tailwind CSS."
+              data={{
+                technology: ["react", "typescript", "tailwindcss"],
+                location: "remote",
+                level: "mid-level",
+              }}
+            />
+            <JobCard
+              title="Senior Software Engineer"
+              company="Data Driven Co."
+              location="Barcelona"
+              description="We are looking for a software engineer with experience in web development."
+              data={{
+                technology: ["typescript", "next.js", "node.js"],
+                location: "barcelona",
+                level: "senior",
+              }}
+            />
+          </div>
 
           {/* Loading indicator shown until jobs are fetched and rendered */}
           <p id="jobs-loading">Loading jobs...</p>
@@ -198,11 +203,7 @@ function App() {
           </a>
         </nav>
       </main>
-
-      {/* The footer provides closing information and legal notice */}
-      <footer>
-        <small>&copy 2026 DevJobs. All rights reserved.</small>
-      </footer>
+      <Footer />
     </>
   );
 }
