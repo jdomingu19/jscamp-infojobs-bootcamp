@@ -2,10 +2,22 @@
 // Full-Stack Web Bootcamp @midudev
 // Module 4: React: src/components/Pagination.jsx
 
-export function Pagination() {
+export function Pagination({ currentPage = 1, totalPages = 10 }) {
+  const pages = Array.from({ length: totalPages }, (_, i) => i + 1);
+
+  const isFirstPage = currentPage === 1;
+  const isLastPage = currentPage === totalPages;
+
+  const stylePreviousButton = isFirstPage
+    ? { pointerEvents: "none", opacity: 0.5 }
+    : {};
+  const styleNextButton = isLastPage
+    ? { pointerEvents: "none", opacity: 0.5 }
+    : {};
+
   return (
     <nav className="pagination">
-      <a href="#">
+      <a href="#" style={stylePreviousButton}>
         <svg
           width="16"
           height="16"
@@ -21,24 +33,20 @@ export function Pagination() {
         </svg>
       </a>
 
-      {/* Page number links */}
-      <a className="is-active" href="#">
-        1
-      </a>
-      <a href="#">2</a>
-      <a href="#">3</a>
-      <a href="#">4</a>
-      <a href="#">5</a>
+      {pages.map((page) => (
+        <a href="#" className={currentPage === page ? "is-active" : ""}>
+          {page}
+        </a>
+      ))}
 
-      {/* Next page button with right arrow icon */}
-      <a href="#">
+      <a href="#" style={styleNextButton}>
         <svg
           width="16"
           height="16"
           viewBox="0 0 24 24"
           fill="none"
           stroke="currentColor"
-          strokeWidth="1.5"
+          strokeWidth="2"
           strokeLinecap="round"
           strokeLinejoin="round"
           className="icon icon-tabler icons-tabler-outline icon-tabler-chevron-right"

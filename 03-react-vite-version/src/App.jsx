@@ -16,7 +16,7 @@ function App() {
         <SearchFormSection />
         <section>
           <JobList />
-          <Pagination />
+          <Pagination currentPage={1} totalPages={10} />
         </section>
       </main>
       <Footer />
