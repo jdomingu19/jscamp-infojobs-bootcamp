@@ -2,7 +2,7 @@
 // Full-Stack Web Bootcamp @midudev
 // Module 4: React: src/components/Header.jsx
 
-const Header = () => {
+export function Header() {
   return (
     <header>
       <h1>
@@ -26,6 +26,4 @@ const Header = () => {
       </nav>
     </header>
   );
-};
-
-export default Header;
+}
