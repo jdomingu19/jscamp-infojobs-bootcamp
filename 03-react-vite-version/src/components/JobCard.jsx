@@ -4,14 +4,15 @@
 
 import { useState } from "react";
 
-export function JobCard({ data, title, company, location, description }) {
+export function JobCard({ job }) {
+  const { data, title, company, location, description } = job;
   const [isApplied, setApplied] = useState(false);
 
   function handleClick() {
     setApplied(!isApplied);
   }
 
-  const buttonText = isApplied ? "Applied!" : "Apply";
+  const buttonText = isApplied ? "Applied" : "Apply";
   const buttonClass = isApplied ? "is-applied" : "";
 
   return (
