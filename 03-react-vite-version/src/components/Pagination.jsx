@@ -2,7 +2,7 @@
 // Full-Stack Web Bootcamp @midudev
 // Module 4: React: src/components/Pagination.jsx
 
-export function Pagination({ currentPage = 1, totalPages = 10 }) {
+export function Pagination({ currentPage = 1, totalPages = 10, onPageChange }) {
   const pages = Array.from({ length: totalPages }, (_, i) => i + 1);
 
   const isFirstPage = currentPage === 1;
@@ -15,9 +15,30 @@ export function Pagination({ currentPage = 1, totalPages = 10 }) {
     ? { pointerEvents: "none", opacity: 0.5 }
     : {};
 
+  const handlePreviousClick = (event) => {
+    event.preventDefault();
+    if (!isFirstPage && currentPage > 1) {
+      onPageChange(currentPage - 1);
+    }
+  };
+
+  const handleNextClick = (event) => {
+    event.preventDefault();
+    if (!isLastPage && currentPage < totalPages) {
+      onPageChange(currentPage + 1);
+    }
+  };
+
+  const handleChangePage = (event, page) => {
+    event.preventDefault();
+    if (page !== currentPage) {
+      onPageChange(page);
+    }
+  };
+
   return (
     <nav className="pagination">
-      <a href="#" style={stylePreviousButton}>
+      <a href="#" style={stylePreviousButton} onClick={handlePreviousClick}>
         <svg
           width="16"
           height="16"
@@ -34,12 +55,17 @@ export function Pagination({ currentPage = 1, totalPages = 10 }) {
       </a>
 
       {pages.map((page) => (
-        <a href="#" className={currentPage === page ? "is-active" : ""}>
+        <a
+          key={page}
+          href="#"
+          className={currentPage === page ? "is-active" : ""}
+          onClick={(event) => handleChangePage(event, page)}
+        >
           {page}
         </a>
       ))}
 
-      <a href="#" style={styleNextButton}>
+      <a href="#" style={styleNextButton} onClick={handleNextClick}>
         <svg
           width="16"
           height="16"
