@@ -178,5 +178,89 @@
       "location": "zurich",
       "level": "junior"
     }
+  },
+  {
+    "id": "c7a2f1d9-8b34-4e2a-9f1a-7d9c3a9123b4",
+    "title": "Frontend Engineer",
+    "company": "Catalonia Web Solutions",
+    "location": "Girona",
+    "description": "We are looking for a frontend engineer with strong skills in React, TypeScript and CSS modules. Experience with responsive design and accessibility is required.",
+    "data": {
+      "technology": ["react", "typescript", "css"],
+      "location": "girona",
+      "level": "mid-level"
+    }
+  },
+  {
+    "id": "d8b3a1c2-9e45-4f7d-8a2b-6c3f9b9124c5",
+    "title": "Backend Developer",
+    "company": "Barcelona Tech Hub",
+    "location": "Tarragona",
+    "description": "We are looking for a backend developer with experience in Node.js, Express and relational databases. Knowledge of Docker and microservices architecture is a plus.",
+    "data": {
+      "technology": ["node", "express", "postgresql"],
+      "location": "tarragona",
+      "level": "senior"
+    }
+  },
+  {
+    "id": "e9c4b2d3-0f56-4a8e-9b3c-7d4f0c9135d6",
+    "title": "Data Scientist",
+    "company": "AI Catalonia Labs",
+    "location": "Lleida",
+    "description": "We are looking for a data scientist with experience in machine learning, statistical modeling and big data tools. Knowledge of Python, TensorFlow and PyTorch is required.",
+    "data": {
+      "technology": ["python", "tensorflow", "pytorch"],
+      "location": "lleida",
+      "level": "junior"
+    }
+  },
+  {
+    "id": "f0d5c3e4-1a67-4b9f-0c4d-8e5f1d9146e7",
+    "title": "Cloud Architect",
+    "company": "Catalonia Cloud Services",
+    "location": "Manresa",
+    "description": "We are looking for a cloud architect with experience in AWS, Azure or GCP. The candidate must have knowledge of infrastructure as code and CI/CD pipelines.",
+    "data": {
+      "technology": ["aws", "azure", "gcp"],
+      "location": "manresa",
+      "level": "senior"
+    }
+  },
+  {
+    "id": "a1d6e7f8-2b78-4c9d-9d5e-8f6a2b9137f8",
+    "title": "Full Stack Developer",
+    "company": "Catalonia Digital",
+    "location": "Sabadell",
+    "description": "We are looking for a full stack developer with experience in React, Node.js and MongoDB. Knowledge of REST APIs and agile methodologies is required.",
+    "data": {
+      "technology": ["react", "node", "mongodb"],
+      "location": "sabadell",
+      "level": "mid-level"
+    }
+  },
+  {
+    "id": "b2e7f9a0-3c89-4d0e-8e6f-9a7b3c9148g9",
+    "title": "UX Researcher",
+    "company": "Design Catalonia",
+    "location": "Terrassa",
+    "description": "We are looking for a UX researcher with experience in user interviews, usability testing and data analysis. Knowledge of Figma and prototyping tools is required.",
+    "data": {
+      "technology": ["figma", "ux", "research"],
+      "location": "terrassa",
+      "level": "junior"
+    }
+  },
+  {
+    "id": "c3f8g0h1-4d90-5e1f-9f7g-0b8c4d9159h0",
+    "title": "AI Engineer",
+    "company": "Smart Catalonia AI",
+    "location": "Mataró",
+    "description": "We are looking for an AI engineer with experience in natural language processing and computer vision. Knowledge of Python, OpenCV and Hugging Face libraries is required.",
+    "data": {
+      "technology": ["python", "opencv", "huggingface"],
+      "location": "mataro",
+      "level": "senior"
+    }
   }
 ]

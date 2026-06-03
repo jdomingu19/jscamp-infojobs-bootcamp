@@ -43,12 +43,16 @@ export function SearchFormSection() {
             {/* Dropdown to filter jobs by technology */}
             <select name="technology" id="filter-technology">
               <option value="">Technologies</option>
+
               <optgroup label="Frontend">
                 <option value="html">HTML</option>
                 <option value="css">CSS</option>
                 <option value="javascript">JavaScript</option>
                 <option value="react">React</option>
                 <option value="vue">Vue</option>
+                <option value="swift">Swift</option>
+                <option value="kotlin">Kotlin</option>
+                <option value="figma">Figma</option>
               </optgroup>
 
               <optgroup label="Backend">
@@ -56,12 +60,37 @@ export function SearchFormSection() {
                 <option value="python">Python</option>
                 <option value="php">PHP</option>
                 <option value="java">Java</option>
+                <option value="express">Express</option>
+                <option value="nosql">NoSQL</option>
+                <option value="docker">Docker</option>
+                <option value="bash">Bash</option>
               </optgroup>
 
               <optgroup label="Database">
                 <option value="mysql">MySQL</option>
                 <option value="mongodb">MongoDB</option>
                 <option value="postgresql">PostgreSQL</option>
+              </optgroup>
+
+              <optgroup label="Cloud & AI">
+                <option value="aws">AWS</option>
+                <option value="azure">Azure</option>
+                <option value="gcp">GCP</option>
+                <option value="tensorflow">TensorFlow</option>
+                <option value="pytorch">PyTorch</option>
+                <option value="opencv">OpenCV</option>
+                <option value="huggingface">Hugging Face</option>
+                <option value="mlops">MLOps</option>
+              </optgroup>
+
+              <optgroup label="Testing">
+                <option value="selenium">Selenium</option>
+                <option value="cypress">Cypress</option>
+                <option value="playwright">Playwright</option>
+              </optgroup>
+
+              <optgroup label="Other">
+                <option value="r">R</option>
               </optgroup>
             </select>
 
@@ -74,6 +103,13 @@ export function SearchFormSection() {
               <optgroup label="Spain">
                 <option value="barcelona">Barcelona</option>
                 <option value="valencia">Valencia</option>
+                <option value="girona">Girona</option>
+                <option value="tarragona">Tarragona</option>
+                <option value="lleida">Lleida</option>
+                <option value="manresa">Manresa</option>
+                <option value="sabadell">Sabadell</option>
+                <option value="terrassa">Terrassa</option>
+                <option value="mataro">Mataró</option>
                 <option value="madrid">Madrid</option>
               </optgroup>
 
