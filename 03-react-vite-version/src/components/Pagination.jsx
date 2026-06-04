@@ -2,6 +2,8 @@
 // Full-Stack Web Bootcamp @midudev
 // Module 4: React: src/components/Pagination.jsx
 
+import styles from "./Pagination.module.css";
+
 export function Pagination({ currentPage = 1, totalPages = 10, onPageChange }) {
   const pages = Array.from({ length: totalPages }, (_, i) => i + 1);
 
@@ -37,7 +39,7 @@ export function Pagination({ currentPage = 1, totalPages = 10, onPageChange }) {
   };
 
   return (
-    <nav className="pagination">
+    <nav className={styles.pagination}>
       <a href="#" style={stylePreviousButton} onClick={handlePreviousClick}>
         <svg
           width="16"
@@ -58,7 +60,7 @@ export function Pagination({ currentPage = 1, totalPages = 10, onPageChange }) {
         <a
           key={page}
           href="#"
-          className={currentPage === page ? "is-active" : ""}
+          className={currentPage === page ? styles.isActive : ""}
           onClick={(event) => handleChangePage(event, page)}
         >
           {page}

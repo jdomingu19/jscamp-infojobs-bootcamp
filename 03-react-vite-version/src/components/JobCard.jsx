@@ -9,11 +9,11 @@ export function JobCard({ job }) {
   const [isApplied, setApplied] = useState(false);
 
   function handleClick() {
-    setApplied(!isApplied);
+    setApplied(true);
   }
 
-  const buttonText = isApplied ? "Applied" : "Apply";
   const buttonClass = isApplied ? "is-applied" : "";
+  const buttonText = isApplied ? "Applied" : "Apply";
 
   return (
     <article
