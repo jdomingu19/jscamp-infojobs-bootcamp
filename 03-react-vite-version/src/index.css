@@ -349,6 +349,12 @@ article {
   .search-bar {
     background: var(--input-bg);
     padding: 0.25rem 0.5rem;
+    position: relative;
+
+    button {
+      position: absolute;
+      right: 4px;
+    }
   }
 
   .search-filters {
@@ -441,11 +447,4 @@ select {
     outline: 2px solid #1173d4;
     outline-offset: 2px;
   }
-}
-
-/* Style the loading message displayed while jobs are being fetched */
-#jobs-loading {
-  font-size: 1.125rem;
-  color: var(--text-muted);
-  max-width: 42rem;
 }

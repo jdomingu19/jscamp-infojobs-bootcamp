@@ -6,7 +6,7 @@
     "location": "Remote",
     "description": "We are looking for a software engineer with experience in web development and knowledge of JavaScript, React and Node.js. The ideal candidate must be able to work in a team and have good communication skills.",
     "data": {
-      "technology": ["react", "node", "javascript"],
+      "technology": ["javascript", "react", "html", "css", "node.js"],
       "location": "remote",
       "level": "senior"
     }
@@ -18,7 +18,7 @@
     "location": "Paris",
     "description": "We are looking for a data analyst with experience handling large data sets and visualization tools. Knowledge of SQL, Python and R is required.",
     "data": {
-      "technology": "python",
+      "technology": ["sql", "python", "r"],
       "location": "paris",
       "level": "junior"
     }
@@ -30,9 +30,9 @@
     "location": "Barcelona",
     "description": "We are looking for a mobile application developer with experience in iOS and/or Android. The candidate must have knowledge of Swift, Kotlin and user interface development.",
     "data": {
-      "technology": "mobile",
+      "technology": ["ios", "android", "swift", "kotlin"],
       "location": "barcelona",
-      "level": "mid-level"
+      "level": "midlevel"
     }
   },
   {
@@ -42,9 +42,9 @@
     "location": "Remote",
     "description": "We are looking for a DevOps engineer with experience in cloud infrastructure management, process automation and continuous integration tools. Knowledge of AWS, Azure or GCP is required.",
     "data": {
-      "technology": "mobile",
+      "technology": ["aws", "azure", "gcp"],
       "location": "remote",
-      "level": "mid-level"
+      "level": "midlevel"
     }
   },
   {
@@ -54,9 +54,9 @@
     "location": "Barcelona",
     "description": "We are looking for a UX/UI designer with a passion for creating exceptional digital experiences. Experience in Figma, user-centered design and collaboration with development teams is required.",
     "data": {
-      "technology": "mobile",
+      "technology": ["figma", "ux/ui", "user-centered design"],
       "location": "barcelona",
-      "level": "mid-level"
+      "level": "midlevel"
     }
   },
   {
@@ -66,9 +66,9 @@
     "location": "Valencia",
     "description": "We are looking for a database administrator with experience in PostgreSQL and MySQL. The candidate will ensure the availability, security and performance of production databases.",
     "data": {
-      "technology": "mobile",
+      "technology": ["postgresql", "mysql"],
       "location": "valencia",
-      "level": "mid-level"
+      "level": "midlevel"
     }
   },
   {
@@ -78,9 +78,9 @@
     "location": "Remote",
     "description": "We are looking for a cybersecurity specialist with knowledge in infrastructure protection, vulnerability analysis and incident response. Experience with SIEM and security certifications will be an advantage.",
     "data": {
-      "technology": "mobile",
+      "technology": ["siem", "security certifications"],
       "location": "remote",
-      "level": "mid-level"
+      "level": "midlevel"
     }
   },
   {
@@ -90,7 +90,7 @@
     "location": "Madrid",
     "description": "We are looking for a Product Manager with experience in the definition and launch of digital products. Analytical capacity, leadership and knowledge of agile methodologies are required.",
     "data": {
-      "technology": "mobile",
+      "technology": ["agile methodologies"],
       "location": "madrid",
       "level": "senior"
     }
@@ -102,9 +102,9 @@
     "location": "Valencia",
     "description": "We are looking for a frontend developer with experience in React, TypeScript and Tailwind CSS. Knowledge of performance optimization and web accessibility will be an advantage.",
     "data": {
-      "technology": "react",
+      "technology": ["react", "html", "css", "typescript", "tailwind css"],
       "location": "valence",
-      "level": "mid-level"
+      "level": "midlevel"
     }
   },
   {
@@ -114,7 +114,7 @@
     "location": "Florence",
     "description": "We are looking for a backend developer with experience in Node.js, Express and NoSQL databases. Knowledge of microservices architecture is required.",
     "data": {
-      "technology": "node",
+      "technology": ["node.js", "express", "nosql", "microservices"],
       "location": "florence",
       "level": "mid"
     }
@@ -126,7 +126,7 @@
     "location": "Remote",
     "description": "We are looking for a machine learning engineer with experience in prediction models and data processing. Knowledge of TensorFlow, PyTorch and MLOps will be an advantage.",
     "data": {
-      "technology": "python",
+      "technology": ["tensorflow", "pytorch", "mlops", "python"],
       "location": "remote",
       "level": "senior"
     }
@@ -138,9 +138,9 @@
     "location": "Milán",
     "description": "We are looking for a QA engineer with experience in test automation using tools such as Selenium, Cypress or Playwright. Desired knowledge of CI/CD.",
     "data": {
-      "technology": "mobile",
+      "technology": ["selenium", "cypress", "playwright", "ci/cd"],
       "location": "milan",
-      "level": "mid-level"
+      "level": "lead"
     }
   },
   {
@@ -150,9 +150,9 @@
     "location": "Rome",
     "description": "We are looking for a system administrator with experience in Linux, Docker and server monitoring. Knowledge of Bash or Python scripting will be a plus.",
     "data": {
-      "technology": "mobile",
+      "technology": ["linux", "docker", "bash", "python"],
       "location": "rome",
-      "level": "mid-level"
+      "level": "midlevel"
     }
   },
   {
@@ -162,9 +162,9 @@
     "location": "Madrid",
     "description": "We are looking for a Scrum Master with experience in agile methodologies and multidisciplinary team management. Scrum Master Certification desirable.",
     "data": {
-      "technology": "mobile",
+      "technology": ["agile methodologies", "scrum"],
       "location": "madrid",
-      "level": "mid-level"
+      "level": "midlevel"
     }
   },
   {
@@ -174,7 +174,7 @@
     "location": "Zurich",
     "description": "We are looking for a support technician with skills in incident resolution, networks and operating systems. Attention to detail and excellent customer service is required.",
     "data": {
-      "technology": "mobile",
+      "technology": ["networks", "operating systems"],
       "location": "zurich",
       "level": "junior"
     }
@@ -186,9 +186,16 @@
     "location": "Girona",
     "description": "We are looking for a frontend engineer with strong skills in React, TypeScript and CSS modules. Experience with responsive design and accessibility is required.",
     "data": {
-      "technology": ["react", "typescript", "css"],
+      "technology": [
+        "react",
+        "html",
+        "css",
+        "typescript",
+        "css modules",
+        "accessibility"
+      ],
       "location": "girona",
-      "level": "mid-level"
+      "level": "midlevel"
     }
   },
   {
@@ -198,7 +205,7 @@
     "location": "Tarragona",
     "description": "We are looking for a backend developer with experience in Node.js, Express and relational databases. Knowledge of Docker and microservices architecture is a plus.",
     "data": {
-      "technology": ["node", "express", "postgresql"],
+      "technology": ["node.js", "express", "docker", "microservices"],
       "location": "tarragona",
       "level": "senior"
     }
@@ -210,7 +217,13 @@
     "location": "Lleida",
     "description": "We are looking for a data scientist with experience in machine learning, statistical modeling and big data tools. Knowledge of Python, TensorFlow and PyTorch is required.",
     "data": {
-      "technology": ["python", "tensorflow", "pytorch"],
+      "technology": [
+        "machinelearning",
+        "bigdata",
+        "python",
+        "tensorflow",
+        "pytorch"
+      ],
       "location": "lleida",
       "level": "junior"
     }
@@ -222,7 +235,7 @@
     "location": "Manresa",
     "description": "We are looking for a cloud architect with experience in AWS, Azure or GCP. The candidate must have knowledge of infrastructure as code and CI/CD pipelines.",
     "data": {
-      "technology": ["aws", "azure", "gcp"],
+      "technology": ["aws", "azure", "gcp", "ci/cd"],
       "location": "manresa",
       "level": "senior"
     }
@@ -234,9 +247,17 @@
     "location": "Sabadell",
     "description": "We are looking for a full stack developer with experience in React, Node.js and MongoDB. Knowledge of REST APIs and agile methodologies is required.",
     "data": {
-      "technology": ["react", "node", "mongodb"],
+      "technology": [
+        "react",
+        "html",
+        "css",
+        "node.js",
+        "mongodb",
+        "restapis",
+        "agilemethodologies"
+      ],
       "location": "sabadell",
-      "level": "mid-level"
+      "level": "midlevel"
     }
   },
   {
@@ -244,9 +265,15 @@
     "title": "UX Researcher",
     "company": "Design Catalonia",
     "location": "Terrassa",
-    "description": "We are looking for a UX researcher with experience in user interviews, usability testing and data analysis. Knowledge of Figma and prototyping tools is required.",
+    "description": "We are looking for a UX researcher with experience in , usability testing and data analysis. Knowledge of Figma and prototyping tools is required.",
     "data": {
-      "technology": ["figma", "ux", "research"],
+      "technology": [
+        "figma",
+        "userinterviews",
+        "usabilitytesting",
+        "dataanalysis",
+        "prototypingtools"
+      ],
       "location": "terrassa",
       "level": "junior"
     }
@@ -258,7 +285,13 @@
     "location": "Mataró",
     "description": "We are looking for an AI engineer with experience in natural language processing and computer vision. Knowledge of Python, OpenCV and Hugging Face libraries is required.",
     "data": {
-      "technology": ["python", "opencv", "huggingface"],
+      "technology": [
+        "natural language processing",
+        "computer vision",
+        "python",
+        "opencv",
+        "hugging face"
+      ],
       "location": "mataro",
       "level": "senior"
     }
