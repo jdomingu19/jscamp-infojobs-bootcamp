@@ -1,0 +1,147 @@
+// JSCamp InfoJobs Bootcamp @jdomingu19
+// Full-Stack Web Bootcamp @midudev
+// Module 4: React: src/pages/Home.jsx
+
+export function HomePage() {
+  return (
+    <main>
+      {/* This section introduces the search functionality */}
+      <section>
+        <img src="./background.webp" alt="" width="200" />
+
+        <h1>Find your dream job</h1>
+
+        <p>
+          Join the largest community of developers and find your next
+          opportunity.
+        </p>
+
+        {/* The form provides a search interface for job listings */}
+        <form role="search">
+          <div>
+            {/* Search icon visually represents the search action */}
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="1"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              className="icon icon-tabler icons-tabler-outline icon-tabler-search"
+            >
+              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+              <path d="M3 10a7 7 0 1 0 14 0a7 7 0 1 0 -14 0" />
+              <path d="M21 21l-6 -6" />
+            </svg>
+
+            {/* Input field allows users to type search queries */}
+            <input
+              required
+              type="text"
+              name=""
+              id=""
+              placeholder="Search jobs by title, skill or company"
+            />
+
+            {/* Submit button triggers the search action */}
+            <button type="submit">Search</button>
+          </div>
+        </form>
+      </section>
+
+      {/* This section highlights platform benefits using article and footer tags */}
+      <section>
+        {/* Section header introduces the benefits */}
+        <header>
+          <h2>Why DevJobs?</h2>
+          <p>
+            DevJobs is the leading job search platform for developers. We
+            connect the best talents with companies more innovative.
+          </p>
+        </header>
+
+        {/* Section footer groups multiple articles with key features */}
+        <footer>
+          <article>
+            {/* Icon represents job opportunities */}
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="1"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              className="icon icon-tabler icons-tabler-outline icon-tabler-briefcase"
+            >
+              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+              <path d="M3 9a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v9a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2l0 -9" />
+              <path d="M8 7v-2a2 2 0 0 1 2 -2h4a2 2 0 0 1 2 2v2" />
+              <path d="M12 12l0 .01" />
+              <path d="M3 13a20 20 0 0 0 18 0" />
+            </svg>
+            <h3>Find your dream job</h3>
+            <p>
+              Search thousands of jobs from the best companies around the world.
+            </p>
+          </article>
+
+          <article>
+            {/* Icon represents networking and company connections */}
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="1"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              className="icon icon-tabler icons-tabler-outline icon-tabler-users-group"
+            >
+              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+              <path d="M10 13a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" />
+              <path d="M8 21v-1a2 2 0 0 1 2 -2h4a2 2 0 0 1 2 2v1" />
+              <path d="M15 5a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" />
+              <path d="M17 10h2a2 2 0 0 1 2 2v1" />
+              <path d="M5 5a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" />
+              <path d="M3 13v-1a2 2 0 0 1 2 -2h2" />
+            </svg>
+            <h3>Connect with the best companies</h3>
+            <p>Access exclusive offers from leading technology companies.</p>
+          </article>
+
+          <article>
+            {/* Icon represents salary and compensation */}
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="1"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              className="icon icon-tabler icons-tabler-outline icon-tabler-coin-euro"
+            >
+              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+              <path d="M3 12a9 9 0 1 0 18 0a9 9 0 1 0 -18 0" />
+              <path d="M14.401 8c-.669 -.628 -1.5 -1 -2.401 -1c-2.21 0 -4 2.239 -4 5s1.79 5 4 5c.9 0 1.731 -.372 2.4 -1" />
+              <path d="M7 10.5h4" />
+              <path d="M7 13.5h4" />
+            </svg>
+            <h3>Get the salary you deserve</h3>
+            <p>Get the salary you deserve with our salary calculator.</p>
+          </article>
+        </footer>
+      </section>
+    </main>
+  );
+}

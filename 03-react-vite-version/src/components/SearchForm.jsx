@@ -1,10 +1,10 @@
 // JSCamp InfoJobs Bootcamp @jdomingu19
 // Full-Stack Web Bootcamp @midudev
-// Module 4: React: src/components/SearchFormSection.jsx
+// Module 4: React: src/components/SearchForm.jsx
 
 import { useId } from "react";
 
-export function SearchFormSection({ onSearch, onTextFilter }) {
+export function SearchForm({ onSearch, onTextFilter }) {
   const searchId = useId();
   const technologyId = useId();
   const locationId = useId();
@@ -13,7 +13,7 @@ export function SearchFormSection({ onSearch, onTextFilter }) {
   const handleSubmit = (event) => {
     event.preventDefault();
 
-    const formData = new FormData(event.target);
+    const formData = new FormData(event.currentTarget);
 
     const filters = {
       search: formData.get(searchId),
@@ -37,7 +37,7 @@ export function SearchFormSection({ onSearch, onTextFilter }) {
         <h1>Find your next job</h1>
         <p>Explore thousands of opportunities in the technology sector.</p>
 
-        <form id="jobs-search-form" role="search" onSubmit={handleSubmit}>
+        <form id="jobs-search-form" role="search" onChange={handleSubmit}>
           {/* Search bar with icon and input field */}
           <div className="search-bar">
             <svg
@@ -64,8 +64,6 @@ export function SearchFormSection({ onSearch, onTextFilter }) {
               placeholder="Search jobs, companies or skills"
               onChange={handleTextChange}
             />
-
-            <button type="submit">Search</button>
           </div>
 
           {/* Filter options for refining job search results */}
