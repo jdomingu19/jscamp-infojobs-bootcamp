@@ -8,6 +8,8 @@
 ![Static Badge](https://img.shields.io/badge/eslint-10+-1C2024?style=for-the-badge&logo=eslint&logoColor=white&labelColor=101010)
 ![Static Badge](https://img.shields.io/badge/vite-7+-1C2024?style=for-the-badge&logo=vite&logoColor=white&labelColor=101010)
 ![Static Badge](https://img.shields.io/badge/babel-7.27+-1C2024?style=for-the-badge&logo=babel&logoColor=white&labelColor=101010)
+![Static Badge](https://img.shields.io/badge/npm-11.6+-1C2024?style=for-the-badge&logo=npm&logoColor=white&labelColor=101010)
+![Static Badge](https://img.shields.io/badge/pnpm-11.4+-1C2024?style=for-the-badge&logo=pnpm&logoColor=white&labelColor=101010)
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
