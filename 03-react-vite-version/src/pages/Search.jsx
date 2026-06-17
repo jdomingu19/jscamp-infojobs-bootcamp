@@ -2,11 +2,7 @@
 // Full-Stack Web Bootcamp @midudev
 // Module 4: React: src/pages/Search.jsx
 
-// JSCamp InfoJobs Bootcamp @jdomingu19
-// Full-Stack Web Bootcamp @midudev
-// Module 4: React: src/App.jsx
-
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 import { SearchForm } from "../components/SearchForm.jsx";
 import { JobList } from "../components/JobList.jsx";
@@ -35,16 +31,16 @@ export function SearchPage() {
     );
   });
 
-  const jobWithTextFilter =
+  const jobsWithTextFilter =
     jobsFilteredByFilters === ""
       ? jobsData
       : jobsFilteredByFilters.filter((job) => {
           return job.title.toLowerCase().includes(textToFilter.toLowerCase());
         });
 
-  const totalPages = Math.ceil(jobWithTextFilter.length / RESULTS_PER_PAGE);
+  const totalPages = Math.ceil(jobsWithTextFilter.length / RESULTS_PER_PAGE);
 
-  const pagedResults = jobWithTextFilter.slice(
+  const pagedResults = jobsWithTextFilter.slice(
     (currentPage - 1) * RESULTS_PER_PAGE,
     currentPage * RESULTS_PER_PAGE,
   );
@@ -62,6 +58,10 @@ export function SearchPage() {
     setTextToFilter(newTextToFilter);
     setCurrentPage(1);
   };
+
+  useEffect(() => {
+    document.title = `Results: ${jobsWithTextFilter.length}, Page ${currentPage} - DevJobs`;
+  }, [jobsWithTextFilter.length, currentPage, textToFilter]);
 
   return (
     <main>

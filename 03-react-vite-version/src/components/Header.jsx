@@ -2,10 +2,12 @@
 // Full-Stack Web Bootcamp @midudev
 // Module 4: React: src/components/Header.jsx
 
+import { Link } from "./Link";
+
 export function Header() {
   return (
     <header>
-      <a href="./" style={{ textDecoration: "none" }}>
+      <Link href="./" style={{ textDecoration: "none" }}>
         <h1 style={{ color: "white" }}>
           <svg
             fill="none"
@@ -21,10 +23,10 @@ export function Header() {
           </svg>
           DevJobs
         </h1>
-      </a>
+      </Link>
 
       <nav>
-        <a href="./search">Search Jobs</a>
+        <Link href="./search">Search Jobs</Link>
       </nav>
     </header>
   );
