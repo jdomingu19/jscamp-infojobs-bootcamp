@@ -2,6 +2,8 @@
 // Full-Stack Web Bootcamp @midudev
 // Module 4: React: src/App.jsx
 
+import { useEffect, useState } from "react";
+
 import { Header } from "./components/Header.jsx";
 import { Footer } from "./components/Footer.jsx";
 
@@ -10,14 +12,26 @@ import { SearchPage } from "./pages/Search.jsx";
 import { NotFoundPage } from "./pages/NotFound.jsx";
 
 function App() {
-  const { pathname } = window.location;
+  const [currentPath, setCurrentPath] = useState(window.location.pathname);
+
+  useEffect(() => {
+    const handledLocationChange = () => {
+      setCurrentPath(window.location.pathname);
+    };
+
+    window.addEventListener("popstate", handledLocationChange);
+
+    return () => {
+      window.removeEventListener("popstate", handledLocationChange);
+    };
+  }, []);
 
   return (
     <>
       <Header />
-      {pathname === "/" && <HomePage />}
-      {pathname === "/search" && <SearchPage />}
-      {pathname !== "/search" && pathname !== "/" && <NotFoundPage />}
+      {currentPath === "/" && <HomePage />}
+      {currentPath === "/search" && <SearchPage />}
+      {currentPath !== "/search" && currentPath !== "/" && <NotFoundPage />}
       <Footer />
     </>
   );
