@@ -2,12 +2,14 @@
 // Full-Stack Web Bootcamp @midudev
 // Module 4: React: src/components/Link.jsx
 
+import { useRouter } from "../hooks/useRouter";
+
 export function Link({ href, children, ...props }) {
+  const { navigateTo } = useRouter();
+
   const handleClick = (event) => {
     event.preventDefault();
-
-    window.history.pushState([], "", href);
-    window.dispatchEvent(new PopStateEvent("popstate"));
+    navigateTo(href);
   };
 
   return (

@@ -2,7 +2,24 @@
 // Full-Stack Web Bootcamp @midudev
 // Module 4: React: src/pages/Home.jsx
 
+import { useRouter } from "../hooks/useRouter.js";
+
 export function HomePage() {
+  const { navigateTo } = useRouter();
+
+  const handleSearch = (event) => {
+    event.preventDefault();
+
+    const formData = new FormData(event.target);
+    const searchTerm = formData.get("search");
+
+    const url = searchTerm
+      ? `/search?text=${encodeURIComponent(searchTerm)}`
+      : "/search";
+
+    navigateTo(url);
+  };
+
   return (
     <main>
       {/* This section introduces the search functionality */}
@@ -17,7 +34,7 @@ export function HomePage() {
         </p>
 
         {/* The form provides a search interface for job listings */}
-        <form role="search">
+        <form role="search" onSubmit={handleSearch}>
           <div>
             {/* Search icon visually represents the search action */}
             <svg
@@ -41,8 +58,8 @@ export function HomePage() {
             <input
               required
               type="text"
-              name=""
-              id=""
+              name="search"
+              id="search"
               placeholder="Search jobs by title, skill or company"
             />
 
